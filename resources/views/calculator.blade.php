@@ -18,6 +18,7 @@
 
 <body class="antialiased">
    <div id="calculator">
+      <calculator :calculations="{{ json_encode($calculations) }}" />
    </div>
 </body>
 
