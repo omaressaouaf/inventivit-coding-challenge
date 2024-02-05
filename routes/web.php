@@ -15,7 +15,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::redirect('/', "/calculator");
+Route::redirect('/', '/calculator');
 
-Route::get("/calculator", ShowCalculatorController::class)->name("calculator.show");
-Route::post("/calculator", CalculateController::class)->name("calculator.calculate");
+Route::get('/calculator', ShowCalculatorController::class)->name('calculator.show');
+Route::post('/calculator', CalculateController::class)->name('calculator.calculate');

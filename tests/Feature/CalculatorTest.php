@@ -17,7 +17,7 @@ class CalculatorTest extends TestCase
 
     public function test_calculator_view_can_be_rendered(): void
     {
-        $response = $this->get(route("calculator.show"));
+        $response = $this->get(route('calculator.show'));
 
         $response->assertOk();
     }
@@ -30,7 +30,7 @@ class CalculatorTest extends TestCase
             Calculation::OPERATOR_COLUMN => '+',
         ];
 
-        $response = $this->post(route("calculator.calculate"), $data);
+        $response = $this->post(route('calculator.calculate'), $data);
 
         $response->assertCreated()->assertJson(fn (AssertableJson $json) => $json->has('calculation'));
         $this->assertDatabaseHas(Calculation::class, $data);
@@ -70,9 +70,9 @@ class CalculatorTest extends TestCase
 
             $expectedResult = eval(sprintf(
                 'return %s %s %s;',
-                (string)$calculation[Calculation::FIRST_NUMBER_COLUMN],
+                (string) $calculation[Calculation::FIRST_NUMBER_COLUMN],
                 $calculation[Calculation::OPERATOR_COLUMN],
-                (string)$calculation[Calculation::SECOND_NUMBER_COLUMN],
+                (string) $calculation[Calculation::SECOND_NUMBER_COLUMN],
             ));
 
             $this->assertEquals($expectedResult, $calculationAsModel->getResult());
@@ -85,7 +85,7 @@ class CalculatorTest extends TestCase
             CalculatorService::compute(
                 5,
                 2,
-                "random-operator"
+                'random-operator'
             );
         }, InvalidCalculationOperatorException::class);
     }
