@@ -1,66 +1,37 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+## Inventiv-IT Coding Challenge PHP/Laravel & Vue.js application by Omar Essaouaf
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+The coding challenge implements the following features:
+1. Ability to perform basic calculations (addition, minus, multiplication, division)
+2. Ability to view calculation history
 
-## About Laravel
+![app](https://lh3.googleusercontent.com/pw/ABLVV86ZcIQT5dYU2DOn_iEtCso50fJjThRXbwph7oqnzEw8NyXsMl6SPWFKjpLy0nz3jrWlmvjOvaN4S_6Ku0GlH7WwHcBbljMJgN1Vbk0DVrDgA4AkW_97d-isPKfnHxeM_vfwEArTmK0e-MnTsHT1kMqbEQWwNTIguAFw6U8a9IBXZuiT84naVr9PalgB7DGDUyLEEDwiW2kzgHoIE78IKri-W4LgfCNHp6VCegxGO5SrjB2PjwMLZSgu7PK5EoDTOG3cyUlzipDsCKT_H8XbGxHxTdFfbRQUxaTpj8BSQQQqQIYotg4luAix1GuCd53Gk3UAwetuh5kV7PP8aCk_5rSe6sOl892ZdO5Vtw3xAc0anrifSgBHDlNX2kZ4G1VIUdQnn1PtYnJKQ0VfTxBK4_-jc9I1gIxTWy0wDiri_9ftak_5AhA0Qs-xToDUdUjhBrrRb0_Zbhrw5dkw4f9C4B84U36zqW-lDRT9Nj7JABMPGXjkW-HVUHQq3842YAn2hhkjMcKc-zIhR7h4ng0M63Frdjd_xjwWnlEX1STVcfM2anorJr-GpfmEIDy992O5U2vP144cBe8FVIkvGaX0N9pCjudXTsqEUau3cmt785RAtZ6yLQEggVN1ChRozsl3prgo999GQWxWeC9GKmgmoyMa1H472YgtGSmuG-J23rwW-wq4vhmjDt3JcnPHaof24lpkIstloXp8q6Cyyarub5vrOcSHB9LtvmAbERks5JAV2iA78sKW7NckSHxrOh0iwdYPkck-roeaZLgSjOsfVQov6OhGkKAPqK5y55wEodj635AWW7CP9o12KS0vDrZdmXYz--eH2o3EWEyuJuZE99wqPYqeF2LH49RJYvwfab3XoHpTNbBMMV_H2175rLY5nTVhG44YCCWk7RGvyw9pWt6KRsRDgTu4QsVohBcTrsb43OOHmDQWLMuJAP-PrC4jM3QgrJdHz1MUnjpYjf308ebJli9n3qMUGrzz57SxkKjsN-h5-rZ8wKdQBSk4RqO-coCgAEbNSDvR15P40qk-97bbaL1rFj2fkvwsqSRI2TlkNrtQ3QZrGi4xMURP=w1194-h667-no?authuser=0)
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+-----
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+The codebase uses advanced code architecture to achive the wanted result such as :
+- Best Practises and Coding Design principles (DRY / SOLID ..)
+- Advanced design patterns **Repository Pattern, Builder Pattern, Factory Pattern, Domain driven development ...**
+- Dependecy injection and container bindings
+- Custom exceptions
+- Invokable Controllers
+- Model reflection of the table definition
+- Using Pint to preset the codebase with `laravel` preset which is based on `PSR-12` for strict and well-define coding style
+- Unit testing with PHPUnit
 
-## Learning Laravel
+-----
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+### How to install & use
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+- Clone the project with `git clone` and navigate to the project directory
+- Copy `.env.example` file to `.env`
+- Create a local mysql database named **inventivit-calculator**
+- **Optional step** : Edit database credentials in `.env` if you have a different database name, database user and password
+- Run the setup script using `chmod +x setup.sh && ./setup.sh`
+- Launch the app using `php artisan serve` or any local setup of your choice
+- **Optional step** : You can ensure that the app is functional by running the test suits `php artisan test --filter=CalculatorTest`
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 2000 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
 
-## Laravel Sponsors
+---
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
-
-### Premium Partners
-
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[WebReinvent](https://webreinvent.com/)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Jump24](https://jump24.co.uk)**
-- **[Redberry](https://redberry.international/laravel/)**
-- **[Active Logic](https://activelogic.com)**
-- **[byte5](https://byte5.de)**
-- **[OP.GG](https://op.gg)**
-
-## Contributing
-
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
-
-## Code of Conduct
-
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
-
-## Security Vulnerabilities
-
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
-
-## License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+That's it. Thank you for taking the time for reviewing
