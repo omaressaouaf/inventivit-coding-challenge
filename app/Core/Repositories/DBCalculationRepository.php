@@ -23,6 +23,6 @@ class DBCalculationRepository implements CalculationRepository
 
     public function getAllCalculations(): Collection
     {
-        return Calculation::query()->get();
+        return Calculation::query()->latest()->get();
     }
 }
