@@ -44,7 +44,7 @@ class CalculatorService
 
     public static function compute(float $firstNumber, float $secondNumber, string $operator): Calculation
     {
-        if (!in_array($operator, self::ALL_OPERATORS)) {
+        if (! in_array($operator, self::ALL_OPERATORS)) {
             throw new InvalidCalculationOperatorException();
         }
 

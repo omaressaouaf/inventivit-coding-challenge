@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\Calculator\CalculateController;
+use App\Http\Controllers\Calculator\ShowCalculatorController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -13,6 +15,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::redirect('/', "/calculator");
+
+Route::get("/calculator", ShowCalculatorController::class)->name("calculator.show");
+Route::post("/calculator", CalculateController::class)->name("calculator.calculate");
